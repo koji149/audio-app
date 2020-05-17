@@ -5,7 +5,6 @@ import MyProductsScreen from './MyProductsScreen'
 import MyFavoliteProductsScreen from './MyFavoliteProductsScreen';
 import MyFollowScreen from './MyFollowScreen'
 import MyFollowerScreen from './MyFollowerScreen';
-import Footer from '../../elements/Footer';
 
 export default class TabsScrollableExample extends Component {
   render() {
@@ -33,7 +32,6 @@ export default class TabsScrollableExample extends Component {
             <MyFollowerScreen />
           </Tab>
         </Tabs>
-        <Footer/>
       </Container>
     );
   }

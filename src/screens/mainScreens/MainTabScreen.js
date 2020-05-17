@@ -5,7 +5,6 @@ import PopularScreen from './PopularScreen'
 import NewScreen from './NewScreen';
 import ComedyScreen from './ComedyScreen'
 import ImitateScreen from './ImitateScreen';
-import Footer from '../../elements/Footer';
 
 export default class TabsScrollableExample extends Component {
   render() {
@@ -33,7 +32,6 @@ export default class TabsScrollableExample extends Component {
             <ASMRScreen />
           </Tab>
         </Tabs>
-        <Footer/>
       </Container>
     );
   }

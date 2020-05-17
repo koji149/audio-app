@@ -2,9 +2,7 @@ import React from 'react';
 import { AppLoading } from 'expo';
 import * as Font from 'expo-font';
 import { Ionicons } from '@expo/vector-icons';
-import MainTabScreen from './src/screens/./mainScreens/MainTabScreen';
-import UserTabScreen from './src/screens/userScreens/UserTabScreen';
-
+import AppNavigator from './src/navigations/AppNavigator';
 
 export default class App extends React.Component {
   constructor(props) {
@@ -29,8 +27,7 @@ export default class App extends React.Component {
     }
 
     return (
-      <MainTabScreen />
-         //<UserTabScreen/>
+        <AppNavigator />
     );
   }
 }
