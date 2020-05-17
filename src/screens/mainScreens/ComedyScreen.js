@@ -28,4 +28,4 @@ const styles = StyleSheet.create({
   wrapper: {},
 })
 
-AppRegistry.registerComponent('news-app', () => SwiperComponent)
+AppRegistry.registerComponent('audio-app', () => SwiperComponent)
