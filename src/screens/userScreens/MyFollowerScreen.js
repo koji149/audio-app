@@ -7,7 +7,10 @@ export default class ListAvatarExample extends Component {
     return (
         <Content>
           <List>
-            <ListItem avatar>
+            <ListItem avatar onPress={() =>
+              this.props.navigation.navigate('OtherUserPage')
+              }
+            >
               <Left>
                 <Thumbnail source={{ uri: uri }} />
               </Left>
@@ -19,7 +22,10 @@ export default class ListAvatarExample extends Component {
                 <Text note>3:43 pm</Text>
               </Right>
             </ListItem>
-            <ListItem avatar>
+            <ListItem avatar onPress={() =>
+              this.props.navigation.navigate('OtherUserPage')
+              }
+            >
               <Left>
                 <Thumbnail source={{ uri: uri }} />
               </Left>

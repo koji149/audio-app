@@ -3,7 +3,7 @@ import { AppRegistry, View, StyleSheet } from 'react-native';
 import AppContent from '../../components/AppContent';
 import Swiper from 'react-native-swiper';
 
-export default class SwiperComponent extends Component {
+export default class RecordingScreen extends Component {
   render() {
     return (
       <Swiper style={styles.wrapper}  horizontal={false}>

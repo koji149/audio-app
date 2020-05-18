@@ -17,7 +17,7 @@ export default class ListThumbnailExample extends Component {
               </Body>
               <Right>
                 <Button transparent>
-                  <Text>View</Text>
+                  <Text>Listen</Text>
                 </Button>
               </Right>
             </ListItem>
@@ -31,7 +31,7 @@ export default class ListThumbnailExample extends Component {
               </Body>
               <Right>
                 <Button transparent>
-                  <Text>View</Text>
+                  <Text>Listen</Text>
                 </Button>
               </Right>
             </ListItem>
@@ -45,7 +45,7 @@ export default class ListThumbnailExample extends Component {
               </Body>
               <Right>
                 <Button transparent>
-                  <Text>View</Text>
+                  <Text>Listen</Text>
                 </Button>
               </Right>
             </ListItem>

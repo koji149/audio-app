@@ -18,16 +18,18 @@ export default class AppContent extends Component {
         <Row style={{  height: 50 }}>
         </Row>
         <Row style={{  height: 50}}>
-          <Col></Col>
-          <Col style={{justifyContent: 'center', alignItems: 'center'}}>
-            <Text style={{fontSize: 40}}>たける</Text>
+          <Col size={1}></Col>
+          <Col size={5} style={{justifyContent: 'center', alignItems: 'center'}}>
+            <Text style={{fontSize: 40}} onPress={() =>
+              this.props.navigation.navigate('OtherUserPage')
+              }>Kumar Pratik</Text>
           </Col>
-          <Col></Col>
+          <Col size={1}></Col>
         </Row>
         <Row style={{  height: 250}}>
           <Col></Col>
           <Col style={{justifyContent: 'center', alignItems: 'center'}}>
-            <Thumbnail large source={{uri: uri}} style={{height: 200, width: 200, borderRadius: 100}}/>
+            <Thumbnail large source={{uri: uri}} style={{height: 200, width: 200, borderRadius: 100}} />
           </Col>
           <Col></Col>
         </Row>

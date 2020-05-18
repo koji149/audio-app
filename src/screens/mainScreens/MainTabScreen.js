@@ -17,7 +17,7 @@ export default class TabsScrollableExample extends Component {
         </Header>
         <Tabs renderTabBar={()=> <ScrollableTab />}>
           <Tab heading="新しい">
-            <NewScreen />
+            <NewScreen navigation={this.props.navigation}/>
           </Tab>
           <Tab heading="人気">
             <PopularScreen />

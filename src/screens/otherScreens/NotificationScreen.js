@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
-import { Container, Header, Content, List, ListItem, Left, Body, Right, Thumbnail, Text, Button, Title } from 'native-base';
-export default class ListAvatarExample extends Component {
+import { Container, Header, Content, List, ListItem, Left, Body, Right, Thumbnail, Text, Button, Title, Toast } from 'native-base';
+
+export default class NotificationScreen extends Component {
+  constructor(props){
+    super(props); 
+  }
   render() {
     const uri = "https://facebook.github.io/react-native/docs/assets/favicon.png";
     return (
@@ -11,17 +15,26 @@ export default class ListAvatarExample extends Component {
           </Body>
         </Header>
         <Content>
-          <List>
-            <ListItem avatar>
+          <List >
+            <ListItem 
+              avatar 
+              onPress={() =>
+              this.props.navigation.navigate('OtherUserPage')
+              }
+            >
               <Left>
                 <Thumbnail source={{ uri: uri }} />
               </Left>
-              <Body>
+              <Body >
                 <Text>Kumar Pratik</Text>
                 <Text note>あなたをフォローしました{"\n"}説明文</Text>
               </Body>
               <Right　style={{justifyContent: 'center'}}>
-                <Button transparent small > 
+                <Button transparent small onPress={()=> Toast.show({
+                  text: 'フォローしました',
+                  buttonText: 'Okay'
+                  })}
+                > 
                   <Text>Follow</Text>
                 </Button>
                 <Text note style={{fontSize: 10}}>10 min</Text>
@@ -36,7 +49,11 @@ export default class ListAvatarExample extends Component {
                 <Text note>あなたの投稿にイイねしました{"\n"}説明文</Text>
               </Body>
               <Right　style={{justifyContent: 'center'}}>
-                <Button transparent small > 
+                <Button transparent small transparent small onPress={()=> Toast.show({
+                  text: 'フォローしました',
+                  buttonText: 'Okay'
+                  })}
+                > 
                   <Text>Follow</Text>
                 </Button>
                 <Text note style={{fontSize: 10}}>10 min</Text>

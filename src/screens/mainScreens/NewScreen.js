@@ -8,16 +8,16 @@ export default class SwiperComponent extends Component {
     return (
       <Swiper style={styles.wrapper}  horizontal={false}>
         <View >
-          <AppContent/>
+          <AppContent navigation={this.props.navigation}/>
         </View>
         <View>
-          <AppContent/>
+          <AppContent navigation={this.props.navigation}/>
         </View>
         <View>
-          <AppContent/>
+          <AppContent navigation={this.props.navigation}/>
         </View>
         <View>
-          <AppContent/>
+          <AppContent navigation={this.props.navigation}/>
         </View>
       </Swiper>
     )

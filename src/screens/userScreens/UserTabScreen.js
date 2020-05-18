@@ -7,6 +7,9 @@ import MyFollowScreen from './MyFollowScreen'
 import MyFollowerScreen from './MyFollowerScreen';
 
 export default class TabsScrollableExample extends Component {
+  constructor(props){
+    super(props); 
+  }
   render() {
     return (
       <Container>
@@ -26,10 +29,10 @@ export default class TabsScrollableExample extends Component {
             <MyFavoliteProductsScreen />
           </Tab>
           <Tab heading="フォロー">
-            <MyFollowScreen />
+            <MyFollowScreen navigation={this.props.navigation}/>
           </Tab>
           <Tab heading="フォロワー">
-            <MyFollowerScreen />
+            <MyFollowerScreen navigation={this.props.navigation}/>
           </Tab>
         </Tabs>
       </Container>

@@ -2,13 +2,14 @@ import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import { Icon, Badge } from "native-base";
+import { Icon, Badge, Root } from "native-base";
 /* screens */
 import MainTabScreen from '../screens/mainScreens/MainTabScreen';
 import SearchScreen from '../screens/otherScreens/SearchScreen';
 import RecordingScreen from '../screens/otherScreens/RecordingScreen';
 import NotificationScreen from '../screens/otherScreens/NotificationScreen';
 import UserTabScreen from '../screens/userScreens/UserTabScreen';
+import OtherUserScreen from '../screens/userScreens/OtherUserScreen';
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -21,6 +22,7 @@ const MainStack = () => {
         component={MainTabScreen}
         options={{headerShown: false}}
       />
+      <Stack.Screen name="OtherUserPage" component={OtherUserScreen} />
     </Stack.Navigator>
   );
 };
@@ -57,6 +59,7 @@ const NotificationStack = () => {
         component={NotificationScreen}
         options={{headerShown: false}}
       />
+      <Stack.Screen name="OtherUserPage" component={OtherUserScreen} />
     </Stack.Navigator>
   );
 };
@@ -69,6 +72,7 @@ const UserStack = () => {
       component={UserTabScreen}
       options={{headerShown: false}}
     />
+      <Stack.Screen name="OtherUserPage" component={OtherUserScreen} />
     </Stack.Navigator>
   );
 };
@@ -99,14 +103,16 @@ const screenOption = ({route}) => ({
 
 export default AppNavigator = () => {
   return (
+    <Root>
     <NavigationContainer>
       <Tab.Navigator screenOptions={screenOption}>
         <Tab.Screen name="Home" component={MainStack} />
         <Tab.Screen name="Search" component={SeachStack} />
         <Tab.Screen name="Recording" component={RecordingStack} />
-        <Tab.Screen name="Notification" component={NotificationStack} />
+        <Tab.Screen name="Notification" component={NotificationStack}></Tab.Screen>
         <Tab.Screen name="User" component={UserStack} />
       </Tab.Navigator>
     </NavigationContainer>
+    </Root>
   );
 };
