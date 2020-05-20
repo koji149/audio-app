@@ -6,7 +6,7 @@ import Swiper from 'react-native-swiper';
 export default class SwiperComponent extends Component {
   render() {
     return (
-      <Swiper style={styles.wrapper}  horizontal={false}>
+      <Swiper style={styles.wrapper} horizontal={false} showsPagination={false}>
         <View >
           <AppContent/>
         </View>

@@ -5,7 +5,7 @@ export default class ButtonSizeExample extends Component {
     return (
         <View style={{ padding: 20}}>
           <Button  large style={{justifyContent: 'center', }} rounded transparent >
-          <Icon name='md-share' style={{fontSize: 50}}/>
+          <Icon name='md-save' style={{fontSize: 50}}/>
           </Button>
         </View>
     );

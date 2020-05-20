@@ -2,7 +2,7 @@ import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import { Icon, Badge, Root } from "native-base";
+import { Icon, Badge, Root, Text, Button } from "native-base";
 /* screens */
 import MainTabScreen from '../screens/mainScreens/MainTabScreen';
 import SearchScreen from '../screens/otherScreens/SearchScreen';
@@ -10,6 +10,8 @@ import RecordingScreen from '../screens/otherScreens/RecordingScreen';
 import NotificationScreen from '../screens/otherScreens/NotificationScreen';
 import UserTabScreen from '../screens/userScreens/UserTabScreen';
 import OtherUserScreen from '../screens/userScreens/OtherUserScreen';
+import OtherUserListScreen from '../screens/userScreens/OtherUserListScreen';
+import EditProfileScreen from '../screens/userScreens/EditProfileScreen';
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -20,9 +22,24 @@ const MainStack = () => {
       <Stack.Screen
         name="Home"
         component={MainTabScreen}
-        options={{headerShown: false}}
+        options={{
+          title: <Text style={{color: '#fff'}}>Audio-App</Text>,
+          headerStyle: {
+            backgroundColor: '#87ceeb',
+          },
+        }}
       />
-      <Stack.Screen name="OtherUserPage" component={OtherUserScreen} />
+      <Stack.Screen 
+        name="OtherUserPage" 
+        component={OtherUserScreen}
+        options={{
+          title: '',
+          headerStyle: {
+            backgroundColor: '#87ceeb',
+          },
+          headerBackTitle: 'Back'
+        }}
+      />
     </Stack.Navigator>
   );
 };
@@ -45,7 +62,12 @@ const RecordingStack = () => {
       <Stack.Screen
         name="Recording"
         component={RecordingScreen}
-        options={{headerShown: false}}
+        options={{
+          title: <Text style={{color: '#fff'}}>Recording</Text>,
+          headerStyle: {
+            backgroundColor: '#87ceeb',
+          },
+        }}
       />
     </Stack.Navigator>
   );
@@ -57,9 +79,24 @@ const NotificationStack = () => {
       <Stack.Screen
         name="Notification"
         component={NotificationScreen}
-        options={{headerShown: false}}
+        options={{
+          title: <Text style={{color: '#fff'}}>Notification</Text>,
+          headerStyle: {
+            backgroundColor: '#87ceeb',
+          },
+        }}
       />
-      <Stack.Screen name="OtherUserPage" component={OtherUserScreen} />
+      <Stack.Screen 
+        name="OtherUserPage" 
+        component={OtherUserScreen}
+        options={{
+          title: '',
+          headerStyle: {
+            backgroundColor: '#87ceeb',
+          },
+          headerBackTitle: 'Back'
+        }}
+      />
     </Stack.Navigator>
   );
 };
@@ -70,9 +107,46 @@ const UserStack = () => {
       <Stack.Screen
       name="User"
       component={UserTabScreen}
-      options={{headerShown: false}}
+      options={{
+        title: <Text style={{color: '#fff'}}>My Page</Text>,
+        headerStyle: {
+          backgroundColor: '#87ceeb',
+        },
+      }}
     />
-      <Stack.Screen name="OtherUserPage" component={OtherUserScreen} />
+      <Stack.Screen 
+        name="OtherUserPage" 
+        component={OtherUserScreen}
+        options={{
+          title: '',
+          headerStyle: {
+            backgroundColor: '#87ceeb',
+          },
+          headerBackTitle: 'Back'
+        }} 
+      />
+      <Stack.Screen 
+        name="OtherUserList" 
+        component={OtherUserListScreen}
+        options={{
+          title: '',
+          headerStyle: {
+            backgroundColor: '#87ceeb',
+          },
+          headerBackTitle: 'Back'
+        }} 
+      />
+      <Stack.Screen 
+        name="EditProfile" 
+        component={EditProfileScreen}
+        options={{
+          title: <Text style={{color: '#fff'}}>Edit</Text>,
+          headerStyle: {
+            backgroundColor: '#87ceeb',
+          },
+          headerBackTitle: 'Back'
+        }} 
+      />
     </Stack.Navigator>
   );
 };
@@ -109,7 +183,7 @@ export default AppNavigator = () => {
         <Tab.Screen name="Home" component={MainStack} />
         <Tab.Screen name="Search" component={SeachStack} />
         <Tab.Screen name="Recording" component={RecordingStack} />
-        <Tab.Screen name="Notification" component={NotificationStack}></Tab.Screen>
+        <Tab.Screen name="Notification" component={NotificationStack} />
         <Tab.Screen name="User" component={UserStack} />
       </Tab.Navigator>
     </NavigationContainer>

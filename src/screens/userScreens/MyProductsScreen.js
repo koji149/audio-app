@@ -3,12 +3,18 @@ import { Content, List, ListItem, Thumbnail, Text, Left, Body, Right, Button, Ic
 import IconHeart2Button from '../../elements/IconHeart2Button';
 
 export default class ListThumbnailExample extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      active: false
+    };
+  }
   render() {
     const uri = "https://facebook.github.io/react-native/docs/assets/favicon.png";
     return (
         <Content>
           <List>
-            <ListItem thumbnail>
+            <ListItem thumbnail >
               <Left>
                 <Thumbnail  source={{ uri: uri }} />
               </Left>
@@ -16,8 +22,8 @@ export default class ListThumbnailExample extends Component {
                 <Text>ごりらのものまね</Text>
                 <Text note numberOfLines={1}>最終更新日：2020/09/02</Text>
               </Body>
-              <Right>
-                <IconHeart2Button/>
+              <Right >
+                <IconHeart2Button navigation={this.props.navigation}/>
               </Right>
             </ListItem>
             <ListItem thumbnail>
@@ -29,7 +35,7 @@ export default class ListThumbnailExample extends Component {
                 <Text note numberOfLines={1}>最終更新日：2020/02/02</Text>
               </Body>
               <Right>
-                <IconHeart2Button/>
+                <IconHeart2Button navigation={this.props.navigation}/>
               </Right>
             </ListItem>
             <ListItem thumbnail>
@@ -41,7 +47,7 @@ export default class ListThumbnailExample extends Component {
                 <Text note numberOfLines={1}>最終更新日：2020/03/02</Text>
               </Body>
               <Right>
-                <IconHeart2Button/>
+                <IconHeart2Button navigation={this.props.navigation}/>
               </Right>
             </ListItem>
           </List>

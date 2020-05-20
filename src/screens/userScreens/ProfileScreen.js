@@ -18,7 +18,7 @@ export default class AppContent extends Component {
           <Col></Col>
           <Col></Col>
           <Col style={{justifyContent: 'top'}}>
-            <IconEditButton/>
+            <IconEditButton navigation={this.props.navigation}/>
           </Col>
         </Row>
         <Row style={{  height: 30}}>

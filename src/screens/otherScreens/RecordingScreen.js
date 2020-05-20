@@ -1,31 +1,14 @@
 import React, { Component } from 'react';
-import { AppRegistry, View, StyleSheet } from 'react-native';
-import AppContent from '../../components/AppContent';
-import Swiper from 'react-native-swiper';
+import { View, Text } from 'react-native';
 
 export default class RecordingScreen extends Component {
   render() {
     return (
-      <Swiper style={styles.wrapper}  horizontal={false}>
-        <View >
-          <AppContent/>
-        </View>
-        <View>
-          <AppContent/>
-        </View>
-        <View>
-          <AppContent/>
-        </View>
-        <View>
-          <AppContent/>
-        </View>
-      </Swiper>
+      <View style={{ alignItems: 'center'}}>
+        <Text>
+          ここに録音画面をつくる
+        </Text>
+      </View>
     )
   }
 }
-
-const styles = StyleSheet.create({
-  wrapper: {},
-})
-
-AppRegistry.registerComponent('audio-app', () => SwiperComponent)

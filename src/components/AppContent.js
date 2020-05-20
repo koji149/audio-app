@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import { Text, Thumbnail } from 'native-base';
 import { Col, Row, Grid } from 'react-native-easy-grid';
-import IconHeartButton from '../elements/IconHeartButton';
-import IconShareButton from '../elements/IconShareButton'
+import IconHeartButton from '../elements/IconHeartButton.js'
 
 export default class AppContent extends Component {
   constructor(props) {
@@ -38,7 +37,6 @@ export default class AppContent extends Component {
         </Row>
         <Row style={{ height: 120}}>
           <Col>
-            <IconShareButton/>
           </Col>
           <Col></Col>
           <Col>

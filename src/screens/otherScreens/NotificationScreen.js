@@ -9,11 +9,6 @@ export default class NotificationScreen extends Component {
     const uri = "https://facebook.github.io/react-native/docs/assets/favicon.png";
     return (
       <Container>
-        <Header hasTabs style={{height: 60 }}>
-          <Body style={{justifyContent: 'center'}}>
-            <Title>Audioなんとか</Title>
-          </Body>
-        </Header>
         <Content>
           <List >
             <ListItem 

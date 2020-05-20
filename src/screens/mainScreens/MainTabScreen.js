@@ -10,13 +10,8 @@ export default class TabsScrollableExample extends Component {
   render() {
     return (
       <Container>
-        <Header hasTabs style={{height: 40}}>
-          <Body>
-            <Title>Audioなんとか</Title>
-          </Body>
-        </Header>
-        <Tabs renderTabBar={()=> <ScrollableTab />}>
-          <Tab heading="新しい">
+        <Tabs renderTabBar={()=> <ScrollableTab />} >
+          <Tab heading="新しい" >
             <NewScreen navigation={this.props.navigation}/>
           </Tab>
           <Tab heading="人気">

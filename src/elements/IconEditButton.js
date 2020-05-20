@@ -3,9 +3,11 @@ import { Button, Icon, View } from 'native-base';
 export default class ButtonSizeExample extends Component {
   render() {
     return (
-        <View style={{ padding: 20  }}>
-          <Button info style={{justifyContent: 'center', }} rounded  >
-          <Icon name='md-create' style={{fontSize: 25, color: '#fff'}}/>
+        <View style={{ padding: 20 } }>
+          <Button info style={{justifyContent: 'center', }} rounded onPress={() =>
+              this.props.navigation.navigate('EditProfile')
+              }>
+            <Icon name='md-create' style={{fontSize: 25, color: '#fff'}}/>
           </Button>
         </View>
     );
