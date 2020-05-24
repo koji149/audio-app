@@ -4,10 +4,12 @@ export default class ButtonSizeExample extends Component {
   render() {
     return (
           <Button iconLeft transparent onPress={() =>
-            this.props.navigation.navigate('OtherUserList')
+            this.props.navigation.navigate('LikedUserList', { 
+              likeNumber: this.props.likeNumber,
+              likeUsers: this.props.likeUsers} )
             }>
             <Icon name='md-heart' style={{fontSize: 20}} />
-            <Text>20</Text>
+            <Text>{this.props.likeNumber}</Text>
           </Button>
     );
   }

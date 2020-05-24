@@ -4,12 +4,7 @@ import { Col, Row, Grid } from 'react-native-easy-grid';
 import IconHeartButton from '../elements/IconHeartButton.js'
 
 export default class AppContent extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      active: false
-    };
-  }
+
   render() {
     const uri = "https://facebook.github.io/react-native/docs/assets/favicon.png";
     return (
@@ -21,7 +16,7 @@ export default class AppContent extends Component {
           <Col size={5} style={{justifyContent: 'center', alignItems: 'center'}}>
             <Text style={{fontSize: 40}} onPress={() =>
               this.props.navigation.navigate('OtherUserPage')
-              }>Kumar Pratik</Text>
+            }>{this.props.userName}</Text>
           </Col>
           <Col size={1}></Col>
         </Row>
@@ -32,8 +27,12 @@ export default class AppContent extends Component {
           </Col>
           <Col></Col>
         </Row>
-        <Row style={{  height: 40, alignItems: 'center', justifyContent: 'center'}}>
-          <Text style={{fontSize: 30}}>おはよう。いいてんきだね</Text>
+        <Row style={{ height: 40, alignItems: 'center', justifyContent: 'center'}}>
+          <Col size={1}></Col>
+          <Col size={8} >
+            <Text style={{fontSize: 30}}>{this.props.text}</Text>
+          </Col>
+          <Col size={1}></Col>
         </Row>
         <Row style={{ height: 120}}>
           <Col>

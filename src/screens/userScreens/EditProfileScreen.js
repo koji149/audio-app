@@ -1,11 +1,9 @@
 import React, { Component } from "react";
-import { Container, Content, Textarea, Form, Item, Input, Icon, Thumbnail } from "native-base";
-import { Col, Row, Grid } from 'react-native-easy-grid';
+import { Container, Content, Textarea, Form, Item, Input, Icon } from "native-base";
 
 import IconSaveButton from '../../elements/IconSaveButton.js'
 export default class TextArea extends Component {
   render() {
-    const uri = "https://facebook.github.io/react-native/docs/assets/favicon.png";
     return (
       <Container>
         <Content padder>

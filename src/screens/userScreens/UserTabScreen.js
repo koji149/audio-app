@@ -21,7 +21,7 @@ export default class TabsScrollableExample extends Component {
             <MyProductsScreen navigation={this.props.navigation}/>
           </Tab>
           <Tab heading="お気に入り">
-            <MyFavoliteProductsScreen />
+            <MyFavoliteProductsScreen navigation={this.props.navigation}/>
           </Tab>
           <Tab heading="フォロー">
             <MyFollowScreen navigation={this.props.navigation}/>

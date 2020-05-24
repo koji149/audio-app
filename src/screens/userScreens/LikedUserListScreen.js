@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
-import { ListItem, Left, Body, Right, Thumbnail, Text } from 'native-base';
-import { FlatList } from 'react-native';
+import { Content, List, ListItem, Left, Body, Right, Thumbnail, Text } from 'native-base';
+import { View, FlatList, ScrollView } from 'react-native';
+
+
 import InfiniteScrollView from 'react-native-infinite-scroll-view';
 
 const list = [
@@ -11,7 +13,7 @@ const list = [
   { id: 5, email: 'Kumar@ss', name: 'user5', thumbnail: 'https://facebook.github.io/react-native/docs/assets/favicon.png', text: 'memo5', time: '3:43 pm', products: 5, follow: 55, follower: 555},
   { id: 6, email: 'Kumar@ss', name: 'user6', thumbnail: 'https://facebook.github.io/react-native/docs/assets/favicon.png', text: 'memo6', time: '3:43 pm', products: 6, follow: 66, follower: 666},
   { id: 7, email: 'Kumar@ss', name: 'user7', thumbnail: 'https://facebook.github.io/react-native/docs/assets/favicon.png', text: 'memo7', time: '3:43 pm', products: 7, follow: 77, follower: 777},
-  { id: 8, email: 'Kumar@ss', name: 'user8', thumbnail: 'https://facebook.github.io/react-native/docs/assets/favicon.png', text: 'memo8', time: '3:43 pm', products: 8, follow: 88, follower: 888}
+  { id: 8, email: 'Kumar@ss', name: 'user8', thumbnail: 'https://facebook.github.io/react-native/docs/assets/favicon.png', text: 'memo8', time: '3:43 pm', products: 8, follow: 88, follower: 888},
 ]
 
 export default class ListAvatarExample extends Component {

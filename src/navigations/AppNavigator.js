@@ -10,8 +10,11 @@ import RecordingScreen from '../screens/otherScreens/RecordingScreen';
 import NotificationScreen from '../screens/otherScreens/NotificationScreen';
 import UserTabScreen from '../screens/userScreens/UserTabScreen';
 import OtherUserScreen from '../screens/userScreens/OtherUserScreen';
-import OtherUserListScreen from '../screens/userScreens/OtherUserListScreen';
+import LikedrUserListScreen from '../screens/userScreens/LikedUserListScreen';
 import EditProfileScreen from '../screens/userScreens/EditProfileScreen';
+import EditProductScreen from '../screens/userScreens/EditProductScreen';
+import ListenFavoliteProductScreen from '../screens/userScreens/ListenFavoliteProductScreen'
+
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -126,8 +129,8 @@ const UserStack = () => {
         }} 
       />
       <Stack.Screen 
-        name="OtherUserList" 
-        component={OtherUserListScreen}
+        name="LikedUserList" 
+        component={LikedrUserListScreen}
         options={{
           title: '',
           headerStyle: {
@@ -147,7 +150,30 @@ const UserStack = () => {
           headerBackTitle: 'Back'
         }} 
       />
+      <Stack.Screen 
+        name="EditProduct" 
+        component={EditProductScreen}
+        options={{
+          title: <Text style={{color: '#fff'}}>Edit</Text>,
+          headerStyle: {
+            backgroundColor: '#87ceeb',
+          },
+          headerBackTitle: 'Back'
+        }} 
+      />
+      <Stack.Screen 
+        name="ListenProduct" 
+        component={ListenFavoliteProductScreen}
+        options={{
+          title: <Text style={{color: '#fff'}}>Edit</Text>,
+          headerStyle: {
+            backgroundColor: '#87ceeb',
+          },
+          headerBackTitle: 'Back'
+        }} 
+      />
     </Stack.Navigator>
+    
   );
 };
 

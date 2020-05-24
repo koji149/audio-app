@@ -58,7 +58,7 @@ export default class AppContent extends Component {
         </Row>
         <Row style={{ height: 160  }} >
         <Col size={1}></Col>
-          <Col size={5} >
+          <Col size={8} >
             <Text style={{fontSize: 20}}>僕はたける！！35歳だよ！！いろんなvoiceを上げていくから、みんなフォローよろしく！</Text>
           </Col>
           <Col size={1}></Col>
